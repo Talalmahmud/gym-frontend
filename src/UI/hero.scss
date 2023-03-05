@@ -1,0 +1,146 @@
+$primary-color: #6f55f2;
+$heading-color: #132742;
+.hero-wrap {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 100px;
+  gap: 100px;
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    h2 {
+      font-size: 3rem;
+      padding-right: 60px;
+      line-height: 60px;
+      margin-bottom: 20px;
+      span {
+        color: $primary-color;
+      }
+    }
+    p {
+      font-size: 1.1rem;
+      color: $heading-color;
+      margin-bottom: 20px;
+      line-height: 30px;
+    }
+  }
+  .hero-btns {
+    display: flex;
+    gap: 3rem;
+    .register-btn {
+      color: #fff;
+      background-color: $primary-color;
+      border: none;
+      outline: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-weight: 600;
+      font-size: 15px;
+      &:hover {
+        background-color: #4a35b6;
+        cursor: pointer;
+      }
+    }
+    .watch-btn {
+      color: #fff;
+      background-color: rgb(136, 41, 41);
+      border: none;
+      outline: none;
+      font-size: 14px;
+      border-radius: 5px;
+      padding: 0px 10px;
+      font-weight: 600;
+      .watch-btn-style {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        span {
+          color: #fff;
+          font: 14px;
+        }
+      }
+      &:hover {
+        cursor: pointer;
+        background-color: rgb(99, 49, 49);
+      }
+    }
+  }
+  .hero-image {
+    .hero-image-wrapper {
+      position: relative;
+      z-index: 1;
+      .box-1 {
+        height: 350px;
+        width: 350px;
+        border-radius: 50%;
+        background-color: $primary-color;
+        .box-2 {
+          .box-3 {
+            .box-image {
+              img {
+                height: 300px;
+                width: 300px;
+                outline: none;
+                border: none;
+                border-radius: 50%;
+              }
+            }
+          }
+        }
+      }
+      .heart-rate {
+        position: absolute;
+        background-color: #fff;
+        top: 100px;
+        left: 0px;
+        text-align: center;
+        padding: 10px;
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
+          rgba(17, 17, 26, 0.1) 0px 16px 56px,
+          rgba(17, 17, 26, 0.1) 0px 24px 80px;
+      }
+      .gym-location {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        text-align: center;
+        top: 0;
+        right: 10px;
+        padding: 10px;
+        background-color: #fff;
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
+          rgba(17, 17, 26, 0.1) 0px 16px 56px,
+          rgba(17, 17, 26, 0.1) 0px 24px 80px;
+        .location-btn {
+          color: rgb(177, 117, 6);
+          &:hover {
+            cursor: pointer;
+            color: rgb(204, 150, 51);
+          }
+        }
+      }
+      .dumble-image {
+        right: 5px;
+        top: 50%;
+        position: absolute;
+        img {
+          height: 40px;
+          width: 40px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .hero-wrap {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+}

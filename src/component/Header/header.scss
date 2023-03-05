@@ -1,0 +1,115 @@
+$primary-color: #6f55f2;
+$heading-color: #132742;
+
+.header {
+  width: 100%;
+  height: 70px;
+  line-height: 70px;
+  .nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      .logo-image {
+        height: 40px;
+        width: 40px;
+        line-height: 40px;
+        padding: 10px;
+        background: rgb(32, 26, 125);
+        background: linear-gradient(
+          90deg,
+          rgba(32, 26, 125, 1) 7%,
+          rgba(30, 178, 193, 1) 100%,
+          rgba(0, 212, 255, 1) 100%
+        );
+        img {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+      h2 {
+        font-size: 20px;
+      }
+    }
+    .menu {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2.3rem;
+      a {
+        font-size: 1rem;
+        font-weight: 600;
+        color: $heading-color;
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      .register-btn {
+        color: #fff;
+        background-color: $primary-color;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-weight: 600;
+        &:hover {
+          background-color: #4a35b6;
+          cursor: pointer;
+        }
+      }
+      .mobile-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .bar-icon {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.sticky-header {
+  position: sticky;
+  background-color: #f5f5f5;
+  width: 100%;
+  top: 0;
+  z-index: 12;
+}
+
+@media screen and (max-width: 790px) {
+  .register-btn {
+    display: none;
+  }
+  .bar-icon {
+    display: block;
+  }
+
+  .navigation {
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    height: 200px;
+    top: 70px;
+    left: 0;
+    background-color: #f5f5f5;
+    padding: 20px 30px;
+    .menu {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2px;
+    }
+  }
+}

@@ -1,0 +1,94 @@
+$primary-color: #6f55f2;
+$heading-color: #132742;
+.price-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  .price-top {
+    margin-bottom: 2.3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7rem;
+    h2 {
+      color: $heading-color;
+      font-size: 2.3rem;
+      span {
+        color: $primary-color;
+      }
+    }
+    p {
+      color: $heading-color;
+      font-size: 1.2rem;
+    }
+  }
+  .price-bottom {
+    display: flex;
+    gap: 2.3rem;
+
+    .price-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+        rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+      border-radius: 5px;
+      gap: 1rem;
+      .card-top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+        padding: 2rem;
+        gap: 10px;
+        h2 {
+          color: $heading-color;
+          font-size: 1.5rem;
+        }
+        h4 {
+          font-weight: 600;
+
+          span {
+            color: $primary-color;
+            font-size: 12px;
+          }
+        }
+      }
+      .card-bottom {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        gap: 1.2rem;
+        .card-item {
+          display: flex;
+          gap: 10px;
+        }
+      }
+      .card-btn {
+        margin: 1rem 0px;
+        .join-btn {
+          color: #fff;
+          background-color: $primary-color;
+          border: none;
+          outline: none;
+          border-radius: 5px;
+          padding: 10px 20px;
+          font-weight: 600;
+          &:hover {
+            background-color: #4a35b6;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .price-bottom {
+    flex-direction: column;
+  }
+}
